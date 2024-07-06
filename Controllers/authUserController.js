@@ -1,5 +1,5 @@
 const userModel = require('../Models/User-model');
-const {hashPass} = require('../utils/hashPass')
+const {hashPass} = require('../utils/encryptPass')
 const {jsontoken} = require('../utils/GenrateToken')
 
 
@@ -20,7 +20,7 @@ const registeruser = async (req,res)=>{
         })
         const token = jsontoken(user);
         res.cookie("token" , token)
-        res.send(token , "and" , hashedPass)
+        res.send(user)
     }catch(err){
     res.send(err.message);
     }
