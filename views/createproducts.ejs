@@ -1,13 +1,13 @@
 <%- include('./partials/header') %>
+<link rel="stylesheet" href="/css/global.css">
 
-    <% if(success.length>0){ %>
-        <div class="absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 rounded-md bg-blue-500">
-            <span class="inline-block mt-1 mb-1 text-white">
-                <%= success %>
-            </span>
-        </div>
-        <% } %>
-
+<% if(success.length>0){ %>
+    <div class="absolute top-5 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 rounded-md bg-blue-500">
+        <span class="inline-block mt-1 mb-1 text-white">
+            <%= success %>
+        </span>
+    </div>
+    <% } %>
             <div class="min-h-screen flex flex-col">
                 <div class="container px-10 py-20 flex flex-grow">
                     <div class="w-[25%] flex h-screen flex-col items-start">
@@ -16,9 +16,9 @@
                             <a class="block w-fit mb-2" href="">Create new product</a>
                         </div>
                     </div>
-                    <main class="w-3/4 bg-white p-8 shadow ml-4">
+                    <main class="w-3/4 bg-white p-8 shadow ml-4 box-effect">
                         <h2 class="text-xl font-bold mb-4">Create New Product</h2>
-                        <form autocomplete="off" action="/products/create" method="post" enctype="multipart/form-data">
+                        <form autocomplete="off" action="/product/create" method="post" enctype="multipart/form-data">
                             <div class="mb-6">
                                 <h3 class="text-lg font-semibold mb-2">Product Details</h3>
                                 <div class="mb-4">
